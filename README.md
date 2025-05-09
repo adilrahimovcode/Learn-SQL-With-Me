@@ -5,8 +5,7 @@ Bu layihə SQL əmrlərini öyrənmək və əsas SQL sintaksisini vizual şəkil
 ## Xüsusiyyətlər
 
 - Əsas və əlavə SQL əmrlərinin cədvəl şəklində təqdimatı
-- Müasir və səliqəli dizayn
-- (İstəyə görə) qeydiyyat və istifadəçi idarəetməsi (Node.js backend ilə)
+- Səliqəli dizayn
 
 ## Necə işlətmək olar?
 
