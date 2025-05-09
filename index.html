@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SQL Dərsi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Learn <img src="images.png" alt="My Image" class="small-image"></h1>
+    <button id="toggleTableBtn">Əsas əmrlər</button>
+    <div id="tableContainer" style="display:none;">
+        <table>
+            <tr>
+                <th>SQL Əmri</th>
+                <th>Təsviri</th>
+                <th>Nümunə</th>
+            </tr>
+            <tr>
+                <td>SELECT</td>
+                <td>Verilənlər bazasından məlumatları seçmək üçün</td>
+                <td>SELECT * FROM table_name;</td>
+            </tr>
+            <tr>
+                <td>INSERT INTO</td>
+                <td>Cədvələ yeni məlumatlar əlavə etmək üçün</td>
+                <td>INSERT INTO table_name (column1) VALUES (value1);</td>
+            </tr>
+            <tr>
+                <td>UPDATE</td>
+                <td>Mövcud məlumatları yeniləmək üçün</td>
+                <td>UPDATE table_name SET column1 = value1;</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>Məlumatları silmək üçün</td>
+                <td>DELETE FROM table_name WHERE condition;</td>
+            </tr>
+            <tr>
+                <td>CREATE TABLE</td>
+                <td>Yeni cədvəl yaratmaq üçün</td>
+                <td>CREATE TABLE table_name (column1 datatype);</td>
+            </tr>
+            <tr>
+                <td>ALTER TABLE</td>
+                <td>Mövcud cədvəli dəyişdirmək üçün</td>
+                <td>ALTER TABLE table_name ADD column_name datatype;</td>
+            </tr>
+            <tr>
+                <td>DROP TABLE</td>
+                <td>Cədvəli silmək üçün</td>
+                <td>DROP TABLE table_name;</td>
+            </tr>
+            <tr>
+                <td>WHERE</td>
+                <td>Şərt əlavə etmək üçün</td>
+                <td>SELECT * FROM table_name WHERE condition;</td>
+            </tr>
+        </table>
+    </div>
+    <button id="toggleOtherTableBtn">Digər əmrlər</button>
+    <div id="otherTableContainer" style="display:none;">
+        <table>
+            <tr>
+                <th>SQL Əmri</th>
+                <th>Təsviri</th>
+                <th>Nümunə</th>
+            </tr>
+            <tr>
+                <td>ORDER BY</td>
+                <td>Məlumatları sıralamaq üçün</td>
+                <td>SELECT * FROM table_name ORDER BY column1;</td>
+            </tr>
+            <tr>
+                <td>GROUP BY</td>
+                <td>Məlumatları qruplaşdırmaq üçün</td>
+                <td>SELECT column1, COUNT(*) FROM table_name GROUP BY column1;</td>
+            </tr>
+            <tr>
+                <td>HAVING</td>
+                <td>Qruplaşdırılmış nəticələrə şərt qoymaq üçün</td>
+                <td>SELECT column1, COUNT(*) FROM table_name GROUP BY column1 HAVING COUNT(*) > 1;</td>
+            </tr>
+            <tr>
+                <td>JOIN</td>
+                <td>Cədvəlləri birləşdirmək üçün</td>
+                <td>SELECT * FROM table1 JOIN table2 ON table1.id = table2.id;</td>
+            </tr>
+            <tr>
+                <td>UNION</td>
+                <td>İki və ya daha çox sorğunun nəticələrini birləşdirmək üçün</td>
+                <td>SELECT column1 FROM table1 UNION SELECT column1 FROM table2;</td>
+            </tr>
+            <tr>
+                <td>LIMIT</td>
+                <td>Nəticələrin sayını məhdudlaşdırmaq üçün</td>
+                <td>SELECT * FROM table_name LIMIT 5;</td>
+            </tr>
+            <tr>
+                <td>IN</td>
+                <td>Bir neçə dəyər arasında axtarış üçün</td>
+                <td>SELECT * FROM table_name WHERE column1 IN (value1, value2);</td>
+            </tr>
+            <tr>
+                <td>BETWEEN</td>
+                <td>İki dəyər arasında axtarış üçün</td>
+                <td>SELECT * FROM table_name WHERE column1 BETWEEN value1 AND value2;</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        // Əsas əmrlər cədvəli açılıb-bağlanır
+        document.getElementById('toggleTableBtn').onclick = function() {
+            var container = document.getElementById('tableContainer');
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        };
+        document.getElementById('toggleOtherTableBtn').onclick = function() {
+            var container = document.getElementById('otherTableContainer');
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
